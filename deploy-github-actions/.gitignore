@@ -1,2 +1,4 @@
 # Ignorar arquivos sensíveis
 wp-config.php
+
+.github

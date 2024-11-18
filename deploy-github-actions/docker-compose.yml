@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:5.7
+    container_name: banco-teste-deploy
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: 0qqdhq      # Nome do banco de dados
+      MYSQL_USER: 0qqdhq         # Usuário do banco de dados
+      MYSQL_PASSWORD: B!1837_-dFpV5QPe  # Senha do banco de dados
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./db_init.sql:/docker-entrypoint-initdb.d/db_init.sql  # Arquivo de inicialização do banco (opcional)
+    networks:
+      - wordpress_net
+
+  wordpress:
+    image: wordpress:latest
+    container_name: teste-deploy
+    depends_on:
+      - db
+    ports:
+      - "8080:80"  # Mapeamento da porta 8080 do host para a porta 80 do contêiner WordPress
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: 0qqdhq
+      WORDPRESS_DB_PASSWORD: B!1837_-dFpV5QPe
+      WORDPRESS_DB_NAME: 0qqdhq
+    volumes:
+      - ./wp-content:/var/www/html/wp-content
+      - .:/var/www/html  # Mapeia o diretório atual para o diretório do WordPress
+    networks:
+      - wordpress_net
+
+volumes:
+  db_data:  # Volume para persistir dados do banco de dados
+
+networks:
+  wordpress_net:
+    driver: bridge  # Rede padrão para comunicação entre os contêineres

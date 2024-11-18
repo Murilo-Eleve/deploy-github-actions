@@ -223,7 +223,7 @@ if ( ! function_exists( 'wp_install_defaults' ) ) :
 		} else {
 			$first_post = "<!-- wp:paragraph -->\n<p>" .
 			/* translators: First post content. %s: Site link. */
-			__( 'dvdvdv' ) .
+			__( 'Welcome to WordPress. This is your first post. Edit or delete it, then start writing!' ) .
 			"</p>\n<!-- /wp:paragraph -->";
 		}
 
@@ -235,7 +235,7 @@ if ( ! function_exists( 'wp_install_defaults' ) ) :
 				'post_date_gmt'         => $now_gmt,
 				'post_content'          => $first_post,
 				'post_excerpt'          => '',
-				'post_title'            => __( 'xml!' ),
+				'post_title'            => __( 'Hello world!' ),
 				/* translators: Default post slug. */
 				'post_name'             => sanitize_title( _x( 'hello-world', 'Default post slug' ) ),
 				'post_modified'         => $now,
@@ -303,12 +303,12 @@ Commenter avatars come from <a href="%s">Gravatar</a>.'
 		if ( empty( $first_page ) ) {
 			$first_page = "<!-- wp:paragraph -->\n<p>";
 			/* translators: First page content. */
-			$first_page .= __( "wwwwwwww page. It's different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:" );
+			$first_page .= __( "Thisss is an example page. It's different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:" );
 			$first_page .= "</p>\n<!-- /wp:paragraph -->\n\n";
 
 			$first_page .= "<!-- wp:quote -->\n<blockquote class=\"wp-block-quote\"><p>";
 			/* translators: First page content. */
-			$first_page .= __( "Hi there! I'm a bike messenger by day, aspiring actor by night, and this is my website. I live in Los Angeles, have a great dog named Jack, and I like pi&#241;a coladas. (And gettin' caught in the rain.)" );
+			$first_page .= __( "Hi there!ssss I'm a bike messenger by day, aspiring actor by night, and this is my website. I live in Los Angeles, have a great dog named Jack, and I like pi&#241;a coladas. (And gettin' caught in the rain.)" );
 			$first_page .= "</p></blockquote>\n<!-- /wp:quote -->\n\n";
 
 			$first_page .= "<!-- wp:paragraph -->\n<p>";
@@ -340,7 +340,7 @@ Commenter avatars come from <a href="%s">Gravatar</a>.'
 				'post_content'          => $first_page,
 				'post_excerpt'          => '',
 				'comment_status'        => 'closed',
-				'post_title'            => __( 'sssSample Page' ),
+				'post_title'            => __( 'Sample Page' ),
 				/* translators: Default page slug. */
 				'post_name'             => __( 'sample-page' ),
 				'post_modified'         => $now,

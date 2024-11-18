@@ -35,7 +35,7 @@ Copyright 2005-2023 Automattic, Inc.
 
 // Make sure we don't expose any info if called directly
 if ( !function_exists( 'add_action' ) ) {
-	echo 'Hi there!  I\'m just a plugin, not much I can do when called directly.';
+	echo 'Hi theresss!  I\'m just a plugin, not much I can do when called directly.';
 	exit;
 }
 

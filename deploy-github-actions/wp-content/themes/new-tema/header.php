@@ -1,21 +1,13 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html lang="pt-BR">
 <head>
-    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php bloginfo( 'name' ); ?></title>
-    <?php wp_head(); // Carrega os scripts e estilos enfileirados ?>
+    <title><?php bloginfo('name'); ?></title>
+    <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body>
 <header>
-    <h1><?php bloginfo( 'name' ); ?></h1>
-    <h2>testsje</h2>
-    <nav>
-        <?php
-            wp_nav_menu( array(
-                'theme_location' => 'primary', // Menu de navegação
-                'container' => false,
-            ) );
-        ?>
-    </nav>
+    <h1><?php bloginfo('name'); ?></h1>
+    <p><?php bloginfo('description'); ?></p>
 </header>

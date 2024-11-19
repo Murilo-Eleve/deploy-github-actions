@@ -22,7 +22,7 @@ get_header(); // Inclui o cabeçalho (header.php)
             </article>
         <?php endwhile; ?>
     <?php else : ?>
-        <p>Nenhuma postagem encontrada. Adicione conteúdo para começar!</p>
+        <p>Nenhuma postagem encontrada. Adicione conteúdo paras começar!</p>
     <?php endif; ?>
 </main>
 

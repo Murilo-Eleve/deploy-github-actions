@@ -9,6 +9,7 @@
 <body <?php body_class(); ?>>
 <header>
     <h1><?php bloginfo( 'name' ); ?></h1>
+    <h2>teste</h2>
     <nav>
         <?php
             wp_nav_menu( array(

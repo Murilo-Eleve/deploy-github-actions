@@ -3,19 +3,26 @@ get_header(); // Inclui o cabeçalho (header.php)
 ?>
 
 <main>
-    <h1>Bem-vindo ao Meu Tema Básico</h1>
-    <p>Este é um tema simples para começar o desenvolvimento de temas no WordPress.</p>
+    <h1>Últimas Postagens</h1>
+    <p>Confira os artigos mais recentes do nosso blog!</p>
 
     <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
             <article>
-                <h2><?php the_title(); ?></h2>
+                <?php if (has_post_thumbnail()) : ?>
+                    <div class="post-thumbnail">
+                        <a href="<?php the_permalink(); ?>">
+                            <?php the_post_thumbnail('medium', ['class' => 'thumbnail']); ?>
+                        </a>
+                    </div>
+                <?php endif; ?>
+                <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                 <p><?php the_excerpt(); ?></p>
                 <a href="<?php the_permalink(); ?>">Leia mais</a>
             </article>
         <?php endwhile; ?>
     <?php else : ?>
-        <p>Nenhum conteúdo encontrado.</p>
+        <p>Nenhuma postagem encontrada. Adicione conteúdo para começar!</p>
     <?php endif; ?>
 </main>
 

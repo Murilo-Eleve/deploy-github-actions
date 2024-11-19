@@ -4,7 +4,7 @@ get_header(); // Inclui o cabeçalho (header.php)
 
 <main>
     <h1>Últimas Postagens</h1>
-    <p>Confira os artigos mais recentes do nosso blogss!</p>
+    <p>Confira os artigos mais recentes do nosso blogsaasASs!</p>
 
     <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>

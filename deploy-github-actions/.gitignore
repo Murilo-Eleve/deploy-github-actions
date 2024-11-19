@@ -18,3 +18,13 @@ backup/
 
 
 deploy-github-actions/
+
+
+
+# Ignorar toda a pasta wp-content
+deploy-github-actions/wp-content/*
+
+# Permitir rastrear subdiretórios específicos ou arquivos, como index.php
+!deploy-github-actions/wp-content/themes/
+!deploy-github-actions/wp-content/themes/new-tema/
+!deploy-github-actions/wp-content/themes/new-tema/index.php

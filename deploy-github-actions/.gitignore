@@ -2,3 +2,19 @@
 wp-config.php
 
 .github
+
+
+# Ignorar todos os arquivos .sql
+*.sql
+
+# Ignorar a subpasta 'backup'
+backup/
+
+# Ignorar arquivos temporários
+*.tmp
+*.log
+*.bak
+
+
+
+deploy-github-actions/

@@ -4,7 +4,7 @@ get_header(); // Chama o cabeçalho do tema (header.php)
 
 <main>
     <h1>Bem-vindo ao meu tem deu bom d?!</h1>
-    <p>Este é um tema básico para começar sa desenvosslvsseffssr.</p>
+    <p>Este é um tema básfffico para começar sa desenvosslvsseffssr.</p>
 </main>
 
 <?php
